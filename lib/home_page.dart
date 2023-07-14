@@ -1,5 +1,9 @@
+import 'package:first_project/image2.dart';
 import 'package:flutter/material.dart';
-
+// import 'package:carousel_slider/carousel_slider.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:first_project/image1.dart';
+import 'package:first_project/image3.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,6 +13,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  final _controller = PageController();
+
   @override
   Widget build(BuildContext context) {
     // double w = MediaQuery.of(context).size.width;
@@ -21,6 +28,7 @@ class _HomePageState extends State<HomePage> {
             * SEARCH BAR, PROFILE
             * ---------------*/
             Container( //Kontainer untuk search bar nama dll
+              // color: Colors.blue,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -131,8 +139,79 @@ class _HomePageState extends State<HomePage> {
             * KONTEN UTAMA
             * ---------------*/
             Container(
-
-            )
+              color: Color.fromARGB(83, 225, 229, 232),
+              padding: EdgeInsets.only(top: 16),
+              child: Column( // Konten utama
+                  children: [
+                    Container(
+                      child: Row( // e-mading dan selengkapnya
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            // color: Colors.amber,
+                            margin: EdgeInsets.only(left: 24.0, bottom: 10.0),
+                            child: Text(
+                              'e-Mading',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF000000),
+                              ),
+                            ),
+                          ), // e-mading
+                          Container(
+                            // color: Colors.amber,
+                            margin: EdgeInsets.only(right: 24.0, bottom: 10.0),
+                            child: InkWell(
+                              onTap: () {},
+                              child: Text(
+                                'Selengkapnya >',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.blue,
+                                    fontFamily: 'Montserrat'
+                                ),
+                              ),
+                            ),
+                          ) // selengkapnya
+                        ],
+                      ),
+                    ), // e-mading dan selengkapnya
+                    Container( // slider image
+                      margin: EdgeInsets.only(bottom: 8.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Container(
+                            margin: EdgeInsets.only(left: 24.0, right: 24.0),
+                            child: SizedBox(
+                              child: PageView(
+                                controller: _controller,
+                                children: [
+                                  Image_3(),
+                                  Image_3()
+                                ],
+                              ),
+                              height: 173,
+                            ),
+                          ), // sliders
+                          SizedBox(height: 8,),
+                          SmoothPageIndicator(
+                            controller: _controller,
+                            count: 2,
+                            effect: JumpingDotEffect(
+                              activeDotColor: Colors.pink
+                            ),
+                          )
+                        ],
+                      ),
+                    ) // slider image
+                  ],
+                ), // Konten utama
+              )
 
 
 
