@@ -31,22 +31,24 @@ class Image_3 extends StatelessWidget {
                       left: 0.1,
                       right: 110,
                       child: Container(
-                        width: 175,
-                        height: 60,
+                        margin: EdgeInsets.only(right: 158),
+                        width: 178,
+                        height: 55,
                         decoration: BoxDecoration(
                           color: Color(0xFF5864D3),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.symmetric(vertical: 7, horizontal: 8),
+                          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
                                 '#pekanujian',
                                 style: TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 12,
+                                  fontWeight: FontWeight.w800,
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 18,
                                   color: Colors.white,
                                 ),
                               ),
@@ -54,6 +56,7 @@ class Image_3 extends StatelessWidget {
                                 'Klik untuk Lihat Jadwal!',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
+                                  fontFamily: 'Montserrat',
                                   fontSize: 12,
                                   color: Colors.white,
                                 ),

@@ -28,22 +28,23 @@ class Image_1 extends StatelessWidget {
                 left: 0.1,
                 right: 110,
                 child: Container(
-                  width: 175,
+                  width: 178,
                   height: 60,
                   decoration: BoxDecoration(
                     color: Color(0xFF5864D3),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 7, horizontal: 8),
+                    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           '#pekanujian',
                           style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 12,
+                            fontWeight: FontWeight.w800,
+                            fontSize: 18,
+                            fontFamily: 'Montserrat',
                             color: Colors.white,
                           ),
                         ),
@@ -52,6 +53,7 @@ class Image_1 extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: 12,
+                            fontFamily: 'Montserrat',
                             color: Colors.white,
                           ),
                         ),

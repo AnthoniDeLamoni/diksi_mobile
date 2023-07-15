@@ -1,4 +1,4 @@
-import 'package:first_project/image2.dart';
+// import 'package:first_project/image2.dart';
 import 'package:flutter/material.dart';
 // import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -15,6 +15,20 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   final _controller = PageController();
+
+  final List<Widget> imageSliderLists_3 = [
+    Image_3(),
+    Image_3(),
+    Image_3(),
+    Image_3()
+  ];
+
+  var imageSliderLists_1 = [
+    Image_1(),
+    Image_1(),
+    Image_1(),
+    Image_1(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -143,8 +157,8 @@ class _HomePageState extends State<HomePage> {
               padding: EdgeInsets.only(top: 16),
               child: Column( // Konten utama
                   children: [
-                    Container(
-                      child: Row( // e-mading dan selengkapnya
+                    Container( // e-mading dan selengkapnya
+                      child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
@@ -191,24 +205,278 @@ class _HomePageState extends State<HomePage> {
                               child: PageView(
                                 controller: _controller,
                                 children: [
-                                  Image_3(),
-                                  Image_3()
+                                  Image_1(),
+                                  Image_1(),
+                                  Image_1(),
+                                  Image_1(),
                                 ],
                               ),
-                              height: 173,
+                              height: 185,
                             ),
                           ), // sliders
                           SizedBox(height: 8,),
-                          SmoothPageIndicator(
-                            controller: _controller,
-                            count: 2,
-                            effect: JumpingDotEffect(
-                              activeDotColor: Colors.pink
+                          Container(
+                            margin: EdgeInsets.only(bottom: 14),
+                            child: SmoothPageIndicator(
+                              controller: _controller,
+                              count: imageSliderLists_1.length,
+                              effect: ScaleEffect(
+                                activeDotColor: Colors.grey,
+                                dotWidth: 3,
+                                dotHeight: 3,
+                                spacing: 4,
+                                dotColor: Color(0xFFC6C6C6),
+                              ),
                             ),
                           )
                         ],
                       ),
-                    ) // slider image
+                    ), // slider image
+                    Container( // Jadwal hari ini dan selengkapnya
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            // color: Colors.amber,
+                            margin: EdgeInsets.only(left: 24.0, bottom: 9.0),
+                            child: Text(
+                              'Jadwal Hari Ini',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Montserrat',
+                                fontWeight: FontWeight.w600,
+                                color: Color(0xFF000000),
+                              ),
+                            ),
+                          ), // e-mading
+                          Container(
+                            // color: Colors.amber,
+                            margin: EdgeInsets.only(right: 24.0, bottom: 10.0),
+                            child: InkWell(
+                              onTap: () {},
+                              child: Text(
+                                'Selengkapnya >',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.blue,
+                                    fontFamily: 'Montserrat'
+                                ),
+                              ),
+                            ),
+                          ) // selengkapnya
+                        ],
+                      ),
+                    ), // jadwal dan selengkapnya
+                    Container( // box jadwal pelajaran
+                      margin: EdgeInsets.only(left: 24.0, right: 24.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Row( // box cards
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox( // Kontainer box merah pelajaran
+                                width: 170,
+                                height: 144,
+                                child: Card(
+                                  color: Color(0xFFFF5E48),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                  ),
+                                  elevation: 1,
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      right: 22.0,
+                                      top: 16.0,
+                                      left: 16.0,
+                                      bottom: 16.0,
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.only(bottom: 37.0),
+                                          child: Image.asset(
+                                            'assets/math.png',
+                                            width: 24,
+                                            height: 24,
+                                          ),
+                                        ), // Ikon
+                                        Container( // pelajaran dan guru
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Matematika',
+                                                style: TextStyle(
+                                                  fontSize: 16,
+                                                  fontFamily: 'Montserrat',
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.white
+                                                ),
+                                              ),
+                                              Text(
+                                                'Jane Doe S.Pd.',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontFamily: 'Montserrat',
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Color(0x80FFFFFF)
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        ) // Pelajaran & guru
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ), // Kontainer box merah pelajaran
+                              SizedBox( // Kontainer box merah pelajaran
+                                width: 170,
+                                height: 144,
+                                child: Card(
+                                  color: Color(0xFF94B147),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                  ),
+                                  elevation: 1,
+                                  child: Container(
+                                    padding: EdgeInsets.only(
+                                      right: 22.0,
+                                      top: 16.0,
+                                      left: 16.0,
+                                      bottom: 16.0,
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          margin: EdgeInsets.only(bottom: 37.0),
+                                          child: Image.asset(
+                                            'assets/tree.png',
+                                            width: 24,
+                                            height: 24,
+                                          ),
+                                        ), // Ikon
+                                        Container( // pelajaran dan guru
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Biologi',
+                                                style: TextStyle(
+                                                    fontSize: 16,
+                                                    fontFamily: 'Montserrat',
+                                                    fontWeight: FontWeight.w700,
+                                                    color: Colors.white
+                                                ),
+                                              ),
+                                              Text(
+                                                'John Doe S.Pd.',
+                                                style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontFamily: 'Montserrat',
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Color(0x80FFFFFF)
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        ) // Pelajaran & guru
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ), // Kontainer box hijau pelajaran
+                            ],
+                          ), // box card pelajaran
+                          Row( // tulisan keterangan
+                            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Container( // Keterangan matematika
+                                // color: Colors.green,
+                                margin: EdgeInsets.only(left: 10.0, right: 32.0),
+                                width: 144,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Senin, 3 Desember',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                        fontFamily: 'Montserrat',
+                                        color: Color(0x40000000)
+                                      ),
+                                    ),
+                                    Text(
+                                      'Mempelajari tentang bangun datar',
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0xFF000000),
+                                      ),
+                                    ),
+                                    Text(
+                                      '2 Jam Pelajaran',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Montserrat',
+                                          color: Color(0x40000000)
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ), // Keterangan matematika
+                              Container( // Keterangan biologi
+                                // margin: EdgeInsets.only(right: 30.0),
+                                width: 132,
+                                // color: Colors.amber,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Senin, 3 Desember',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Montserrat',
+                                          color: Color(0x40000000)
+                                      ),
+                                    ),
+                                    Text(
+                                      'Ulangan fotosintesis',
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0xFF000000),
+                                      ),
+                                    ),
+                                    Text(
+                                      '2 Jam Pelajaran',
+                                      style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Montserrat',
+                                          color: Color(0x40000000)
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ), // Keterangan biologi
+                            ],
+                          ), // tulisan keterangan
+                        ],
+                      ),
+                    ), // box jadwal pelajaran
                   ],
                 ), // Konten utama
               )

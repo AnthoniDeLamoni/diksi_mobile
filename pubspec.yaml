@@ -66,6 +66,8 @@ flutter:
     - assets/Logo Diksi SVG to PNG 1 (Traced).png
     - assets/profile.png
     - assets/exam.png
+    - assets/math.png
+    - assets/tree.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
