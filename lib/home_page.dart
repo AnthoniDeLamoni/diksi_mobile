@@ -30,6 +30,11 @@ class _HomePageState extends State<HomePage> {
     Image_1(),
   ];
 
+  List<String> str = [
+    'Merangkum Materi di Bab 4',
+    'Tugas Essay'
+  ];
+
   @override
   Widget build(BuildContext context) {
     // double w = MediaQuery.of(context).size.width;
@@ -516,59 +521,317 @@ class _HomePageState extends State<HomePage> {
                         ),
 
                       ), // mata pelajaran dan selengkapnya
-                      Container(
-                        color: Colors.amber,
-                        margin: EdgeInsets.only(right: 24.0, left: 24.0, top: 8.0),
+                      Container( // list tile pelajaran
+                        margin: EdgeInsets.only(right: 24.0, left: 24.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Card(
-                              child: ListTile(
-                                contentPadding: EdgeInsets.all(12.0),
-                                title: Text(
-                                  'Matematika',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontFamily: 'Montserrat',
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xFF000000)
+                            Container(
+                              margin: EdgeInsets.only(top: 8.0),
+                              child: Card(
+                                color: Colors.white70,
+                                elevation: 1,
+                                child: ListTile(
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: Color(0x26000000),
+                                    size: 15.0,
+                                    semanticLabel: 'More Content',
                                   ),
-                                ),
-                                subtitle: Text(
-                                  'Jane Doe S.Pd',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontFamily: 'Montserrat',
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0x80000000),
-                                  ),
-                                ),
-                                leading: Container( // Symbol pelajaran
-                                  color: Colors.blue,
-                                  width: 43.5,
-                                  height: 43.5,
-                                  child: Card(
-                                    color: Color(0xFFFF5E48),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                  title: Text(
+                                    'Matematika',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0xFF000000)
                                     ),
-                                    child: Container(
-                                      // width: 21,
-                                      // height: 21,
-                                      padding: EdgeInsets.all(11.25),
-                                      child: Image.asset(
-                                        'assets/math.png',
-                                        width: 21,
-                                        height: 21,
+                                  ),
+                                  subtitle: Text(
+                                    'Jane Doe S.Pd',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0x80000000),
+                                    ),
+                                  ),
+                                  leading: Container( // Symbol pelajaran
+                                    width: 43.5,
+                                    height: 43.5,
+                                    child: Card(
+                                      color: Color(0xFFFF5E48),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                      ),
+                                      child: Container(
+                                        // width: 21,
+                                        // height: 21,
+                                        padding: EdgeInsets.all(11.25),
+                                        child: Image.asset(
+                                          'assets/math.png',
+                                          width: 21,
+                                          height: 21,
+                                        ),
                                       ),
                                     ),
                                   ),
+
                                 ),
                               ),
-                            )
+                            ), // tile pelajaran
+                            Container(
+                              margin: EdgeInsets.only(top: 8.0),
+                              child: Card(
+                                color: Colors.white70,
+                                elevation: 1,
+                                child: ListTile(
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: Color(0x26000000),
+                                    size: 15.0,
+                                    semanticLabel: 'More Content',
+                                  ),
+                                  title: Text(
+                                    'Matematika',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0xFF000000)
+                                    ),
+                                  ),
+                                  subtitle: Text(
+                                    'Jane Doe S.Pd',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0x80000000),
+                                    ),
+                                  ),
+                                  leading: Container( // Symbol pelajaran
+                                    width: 43.5,
+                                    height: 43.5,
+                                    child: Card(
+                                      color: Color(0xFFFF5E48),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                      ),
+                                      child: Container(
+                                        // width: 21,
+                                        // height: 21,
+                                        padding: EdgeInsets.all(11.25),
+                                        child: Image.asset(
+                                          'assets/math.png',
+                                          width: 21,
+                                          height: 21,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+
+                                ),
+                              ),
+                            ), // tile pelajaran
+                            Container(
+                              margin: EdgeInsets.only(top: 8.0),
+                              child: Card(
+                                color: Colors.white70,
+                                elevation: 1,
+                                child: ListTile(
+                                  trailing: Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    color: Color(0x26000000),
+                                    size: 15.0,
+                                    semanticLabel: 'More Content',
+                                  ),
+                                  title: Text(
+                                    'Matematika',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontFamily: 'Montserrat',
+                                        fontWeight: FontWeight.w400,
+                                        color: Color(0xFF000000)
+                                    ),
+                                  ),
+                                  subtitle: Text(
+                                    'Jane Doe S.Pd',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontFamily: 'Montserrat',
+                                      fontWeight: FontWeight.w400,
+                                      color: Color(0x80000000),
+                                    ),
+                                  ),
+                                  leading: Container( // Symbol pelajaran
+                                    width: 43.5,
+                                    height: 43.5,
+                                    child: Card(
+                                      color: Color(0xFFFF5E48),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                      ),
+                                      child: Container(
+                                        // width: 21,
+                                        // height: 21,
+                                        padding: EdgeInsets.all(11.25),
+                                        child: Image.asset(
+                                          'assets/math.png',
+                                          width: 21,
+                                          height: 21,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+
+                                ),
+                              ),
+                            ), // tile pelajaran
                           ],
                         ),
                       ), // list tile pelajaran
+                      Container( // mata pelajaran dan selengkapnya
+                        margin: EdgeInsets.only(top: 16.5),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Container(
+                              // color: Colors.amber,
+                              margin: EdgeInsets.only(left: 24.0, bottom: 9.0),
+                              child: Text(
+                                'Tugas Hari Ini',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xFF000000),
+                                ),
+                              ),
+                            ), // e-mading
+                            Container(
+                              // color: Colors.amber,
+                              margin: EdgeInsets.only(right: 24.0, bottom: 10.0),
+                              child: InkWell(
+                                onTap: () {},
+                                child: Text(
+                                  'Selengkapnya >',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w500,
+                                      color: Colors.blue,
+                                      fontFamily: 'Montserrat'
+                                  ),
+                                ),
+                              ),
+                            ) // selengkapnya
+                          ],
+                        ),
+
+                      ), // tugas hari ini dan selengkapnya
+                      Container( // list tile pelajaran
+                        margin: EdgeInsets.only(right: 24.0, left: 24.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(top: 8.0),
+                              child: Card(
+                                color: Colors.white70,
+                                elevation: 1,
+                                child: Column(
+                                  children: [
+                                    ListTile(
+                                      trailing: Icon(
+                                        Icons.arrow_forward_ios_rounded,
+                                        color: Color(0x26000000),
+                                        size: 15.0,
+                                        semanticLabel: 'More Content',
+                                      ),
+                                      title: Text(
+                                        'Matematika',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            fontFamily: 'Montserrat',
+                                            fontWeight: FontWeight.w400,
+                                            color: Color(0xFF000000)
+                                        ),
+                                      ),
+                                      subtitle: Text(
+                                        'Jane Doe S.Pd',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontFamily: 'Montserrat',
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0x80000000),
+                                        ),
+                                      ),
+                                      leading: Container( // Symbol pelajaran
+                                        width: 43.5,
+                                        height: 43.5,
+                                        child: Card(
+                                          color: Color(0xFFFF5E48),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.all(Radius.circular(8.0))
+                                          ),
+                                          child: Container(
+                                            // width: 21,
+                                            // height: 21,
+                                            padding: EdgeInsets.all(11.25),
+                                            child: Image.asset(
+                                              'assets/math.png',
+                                              width: 21,
+                                              height: 21,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(12.0),
+                                      child: Divider(height: 0),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(bottom: 12.0, left: 12.0, right: 12.0,),
+                                      child: Container(
+                                        margin: EdgeInsets.only(top: 12.0),
+                                        child: Column(
+                                          children: str.map((strone) {
+                                            return Row(
+                                              children: [
+                                                Text("\u2022",
+                                                  style: TextStyle(
+                                                    fontSize: 14,
+                                                    fontFamily: 'Montserrat',
+                                                    fontWeight: FontWeight.w400,
+                                                    color: Color(0xFF000000),
+                                                  ),
+                                                ), //bullet text
+                                                SizedBox(width: 10,), //space between bullet and text
+                                                Expanded(
+                                                  child:Text(strone,
+                                                    style: TextStyle(
+                                                      fontSize: 14,
+                                                      fontFamily: 'Montserrat',
+                                                      fontWeight: FontWeight.w400,
+                                                      color: Color(0xFF000000),
+                                                    ),
+                                                  ), //text
+                                                )
+                                              ],
+                                            );
+                                          }).toList()
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ), // tile pelajaran
+                          ],
+                        ),
+                      ), // tile tugas hari ini
                     ],
                   ), // Konten utama
                 )
